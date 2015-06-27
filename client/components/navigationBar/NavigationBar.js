@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavigationMenuControl from './navigationMenuControl/';
-import NavigationMenu from './navigationMenu/';
-import NavigationMenuItem from './navigationMenuItem/';
+import SearchBox from '../searchBox/';
 
-import styles from './navigation.css';
+import styles from './navigationBar.css';
 
 export default class Navigation extends React.Component {
   displayName: 'Navigation';
@@ -25,16 +24,13 @@ export default class Navigation extends React.Component {
 
   render() {
     return(
-    <div className={styles.navigation}>
-      <div className={styles.wrapper}>
+    <div className={styles.outer}>
+      <div className={styles.inner}>
         <NavigationMenuControl onMenuToggle={this.handleMenuToggle} open={this.state.open}/>
-          <Link onClick={this.closeMenu} className={styles.brand} to="/">
-            React Seed 1.0
-          </Link>
-        <NavigationMenu open={this.state.open} >
-          <NavigationMenuItem  onMenuToggle={this.closeMenu} linkTo="/pageone">Page One</NavigationMenuItem>
-          <NavigationMenuItem onMenuToggle={this.closeMenu} linkTo="/pagetwo">Page Two</NavigationMenuItem>
-        </NavigationMenu>
+        <Link onClick={this.closeMenu} className={styles.brand} to="/">
+          Bayes Flix
+        </Link>
+        <SearchBox/>
         <div className={styles.clearfix}/>
       </div>
     </div>

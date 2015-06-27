@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonLoaders = [
 {
   test: /\.jsx?$/,
-  loader: 'babel-loader',
+  loaders: ['babel-loader'],
   exclude: /node_modules/,
 },
 { test: /\.png$/, loader: 'url-loader' },
@@ -19,7 +19,7 @@ module.exports = {
     loaders:commonLoaders.concat(
     {
       test: /\.css$/,
-      loader: 'style-loader!css-loader?modules&&localIdentName=[name]_[local]!postcss',
+      loader: ExtractTextPlugin.extract('style-loader','css-loader?modules&&localIdentName=[name]_[local]!postcss'),
     })
   },
   server: {

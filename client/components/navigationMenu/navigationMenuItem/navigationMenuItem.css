@@ -1,0 +1,24 @@
+
+.item {
+  display: block;
+  font-size: 1em;
+  line-height: 1.416666667em;
+  padding: 1em;
+  text-decoration: none;
+  float: none;
+  margin:.25em 0;
+  color:$primary_text_color;
+}
+
+.item:hover,
+.item:active,
+.item.itemActive {
+  background: #E3E3E3;
+  color: $primary_color;
+}
+
+@media (min-width: 768px) {
+  .item {
+    border-top: 0;
+  }
+}

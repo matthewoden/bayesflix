@@ -1,0 +1,50 @@
+.main {
+  transition: background 0.25s ease-in-out, background 0.25s ease-in-out;
+  color: $primary_text_color;
+  background:rgba(255,255,255,0.25);
+  font-size: 1em;
+  margin-top: .5em;
+  padding:.5em;
+  width:50%;
+  margin-left:90px;
+  border:1px solid $primary_color;
+  border-radius:4px;
+}
+.main:focus{
+  background:rgba(255,255,255,0.75);
+  outline: 0;
+  border:1px solid $dark_primary_color;
+}
+
+::-webkit-input-placeholder {
+ color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ color: white;
+}
+
+:-ms-input-placeholder {
+ color: white;
+}
+
+
+.main:focus::-webkit-input-placeholder {
+ color: $primary_color;
+}
+
+.main:focus:-moz-placeholder { /* Firefox 18- */
+ color: $primary_color;
+}
+
+.main:focus::-moz-placeholder {  /* Firefox 19+ */
+ color: $primary_color;
+}
+
+.main:focus:-ms-input-placeholder {
+ color: $primary_color;
+}

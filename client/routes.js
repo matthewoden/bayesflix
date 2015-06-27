@@ -3,16 +3,16 @@ import React from 'react';
 import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
 
 //Components
-var App = require('./components/app/');
-var Home = require('./components/home/');
-var PageOne =  require('./components/pageOne/');
-var PageTwo = require('./components/pageTwo/');
+var App = require('./containers/app/');
+var Home = require('./containers/home/');
+var Search =  require('./containers/search/');
+var Suggestions = require('./containers/suggestions/');
 
 export default (
       <Route handler={ App } path="/" >
         <DefaultRoute handler={ Home } />
-        <Route path="/pageone" handler={ PageOne } />
-        <Route path="/pagetwo" handler={ PageTwo } />
+        <Route path="/search" handler={ Search } />
+        <Route path="/suggestions" handler={ Suggestions } />
         <NotFoundRoute handler={ Home } />
       </Route>
     );

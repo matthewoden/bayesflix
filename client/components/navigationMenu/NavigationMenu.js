@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classNames';
 import styles from './navigationMenu.css';
+import NavigationMenuItem from './navigationMenuItem/';
 
 export default class NavigationMenu extends React.Component {
   displayName: 'Navigation Menu';
@@ -15,11 +16,12 @@ export default class NavigationMenu extends React.Component {
     }
   }
   render(){
-    let classes = classNames(styles.navigationMenu, (!this.props.open || styles.navigationMenuOpen));
+    let classes = classNames(styles.main, (!this.props.open || styles.open));
 
     return (
       <div className={classes}>
-        {this.props.children}
+        <NavigationMenuItem  onMenuToggle={this.closeMenu} linkTo="/search">Search</NavigationMenuItem>
+        <NavigationMenuItem onMenuToggle={this.closeMenu} linkTo="/suggestions">Suggestions</NavigationMenuItem>
       </div>
     );
   }

@@ -32,4 +32,6 @@ node_modules/*
 assets/prerender/*
 assets/public/*
 
+*/local.env.js
+
 npm-debug.log

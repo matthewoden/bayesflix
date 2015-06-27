@@ -11,12 +11,11 @@ class FullPage extends React.Component {
           <title>{this.props.title}</title>
           <meta name="description" content=""/>
           <meta name="viewport" content="width=device-width"/>
-          <style dangerouslySetInnerHTML={{__html: this.props.css}}/>
+          <link rel="stylesheet" type="text/css" href={"/assets/app.css"}/>
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{__html: this.props.markup}}/>
-          <script src={"assets/"+this.props.hash+".common.js"}></script>
-          <script src={"assets/"+this.props.hash+".app.js"}></script>
+          <script src={"/assets/app.js"}></script>
         </body>
       </html>
     );

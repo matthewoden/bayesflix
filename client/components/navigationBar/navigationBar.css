@@ -1,23 +1,17 @@
-.navigation {
+.outer {
   background: $primary_color;
   display: block;
   width: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 100;
   top:0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.wrapper {
-  max-width: 960px;
-  width: 100%;
-  margin: auto;
 }
 
 .brand {
@@ -27,10 +21,11 @@
   color: white;
   display: inline-block;
   text-decoration: none;
+  min-width:120px;
 }
 
 @media (min-width: 768px) {
-  .navigation {
+  .outer {
     position: relative;
   }
 

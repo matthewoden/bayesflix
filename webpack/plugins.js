@@ -37,13 +37,13 @@ if(process.env.NODE_ENV === "production"){
 module.exports = {
   client:[
     //clean out assets directory.
-    new Clean(['../assets']), //Clean out build directory
-    //hashed commons package.
-    new webpack.optimize.CommonsChunkPlugin('common', '[hash].common.js', {allChunks:false}),
+    //new Clean(['../assets']), //Clean out build directory
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
     //no repeats
     new webpack.optimize.DedupePlugin(),
     //get hashed css
-    new ExtractTextPlugin('[hash].[name].css'),
+    new ExtractTextPlugin('[name].css'),
     //Create Statsfile (needed for prerender);
     makeStats
   ].concat(prodPlugins.concat(gzipPlugin)),

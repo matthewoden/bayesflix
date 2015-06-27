@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Page from '../page/';
-import pageStyles from '../page/page.css';
-import type from '../global/typography.css';
+import Page from '../../components/page/';
+import pageStyles from '../../components/page/page.css';
+import type from '../../components/global/typography.css';
 
 export default class PageOne extends React.Component {
     displayName: 'pageOne';
@@ -12,7 +12,7 @@ export default class PageOne extends React.Component {
         return (
           <Page title="Page One">
             <div className={pageStyles.container}>
-              <h1 className={type.pageTitle}>Page One</h1>
+              <h1 className={type.pageTitle}>Search</h1>
             </div>
           </Page>
         );
